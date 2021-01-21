@@ -1,0 +1,47 @@
+.accordion-wrap {
+    background: #fffffe;
+    border-radius: 4px;
+}
+.accordion-wrap:not(:last-child) {
+    margin-bottom: 15px;
+}
+.accordion-head {
+    padding: 20px;
+    padding-right: 50px;
+    font-size: $font22;
+    color: $black;
+    position: relative;
+    cursor: pointer;
+    border:1px solid $border-color;
+    &:after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: url("https://cdn.statically.io/gist/koptyaisky/33f5da3d9e6b6cacdf5a353ad033c2ea/raw/c8468a17e0141ee82a2571deea1f76162abb47b6/arrow-down-blue.svg") no-repeat center;
+        background-size: contain;
+        transition: all .4s ease;
+    }
+}
+.accordion-body {
+    padding: 20px 40px 20px 20px;
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: #5f6c7b;
+    line-height: 1.5;
+    display: none;
+    border-left:1px solid $border-color;
+    border-right:1px solid $border-color;
+    border-bottom:1px solid $border-color;
+}
+.open-accordion .accordion-body {
+    display: block;
+}
+.open-accordion .accordion-head::after {
+    transform: rotate(-180deg);
+}

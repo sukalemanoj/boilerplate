@@ -1,0 +1,95 @@
+.mobile-fixed-button, #fixed-jobs-btn {
+  position: fixed;
+  bottom: 10px;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(calc(100% + 50px));
+  transition: all 400ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  z-index: 99;
+  &.show {
+    transform: translateY(0);
+    margin: 0 auto!important;
+  }
+}
+footer {
+  padding: 6% 0;
+  background-color: $themecolor3;
+  &.fixed-button {
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 100px;
+    }
+  }
+  .footer-wrap {
+    @extend %df;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+    .block {
+      width: calc(100% / 3 - 5%);
+      margin-right: 5%;
+      &:last-child {
+        margin-right: 0;
+      }
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+      @media only screen and (max-width: 500px) {
+        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &--title {
+        font-size: $font30;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      p {
+        font-size: $font18;
+      }
+    }
+  }
+}
+
+.social {
+  @extend %df;
+  @extend %aic;
+  li {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      width: 56px;
+      height: 56px;
+      @extend %df;
+      @extend %aic;
+      @extend %jcc;
+      background-color: $white;
+      font-size: 23px!important;
+      border-radius: 50%;
+    }
+  }
+}
+
+.pipe-links {
+  @extend %df;
+  @extend %aic;
+  a {
+    font-size: $font18;
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 1px solid $black;
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      border-right: 0;
+    }
+  }
+}

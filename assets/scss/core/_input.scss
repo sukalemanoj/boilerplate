@@ -1,0 +1,403 @@
+.form--input-field-wrap {
+	width: 100%;
+	padding-bottom:18px;
+
+	&.extent-link {
+		@extend .df;
+		@extend .jcfe;
+		@extend .aife;
+		@extend .fdc;
+
+		.link {
+			font-size: $font14;
+			margin-top: 5px;
+			padding: 0;
+		}
+	}
+
+	&.extent-btn {
+		@extend .df;
+		@extend .jcfs;
+		@extend .aic;
+
+		.pure-material-textfield-outlined {
+			width: calc(100% - 190px);
+		}
+
+		.base--btn {
+			margin-left: 30px;
+			padding: 15px 50px;
+		}
+	}
+	// p{
+	// 	.infomessage;
+	// }
+	.custom--radio-field {
+		@extend .df;
+		@extend .jcfs;
+		@extend .aic;
+		@extend .fww;
+		margin-bottom: 10px;
+
+		&-title {
+			width: 100%;
+			font-size: $font16;
+			font-weight: $light;
+			color: $text_color_2;
+			line-height: 14px;
+			margin-bottom: 10px;
+
+			span {
+				font-size: $font12;
+			}
+		}
+
+		&-wrap {
+			@extend .df;
+			@extend .jcfs;
+			@extend .aic;
+			width: 100%;
+			border: 1px solid $border-color;
+		}
+
+		.custom--radio {
+			display: block;
+			position: relative;
+			width: calc(100% / 3);
+			padding: 15px 0;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			text-align: center;
+			border-right: 1px solid $border-color;
+
+			&:last-child {
+				border-right: none;
+			}
+
+			input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+			}
+
+			.checkmark {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.radio--name {
+				font-size: $font16;
+				font-weight: $light;
+				color: $text_color_2;
+				position: relative;
+			}
+
+			input:checked ~ .checkmark {
+				border: 2px solid $primary_color_4;
+			}
+
+			input:focus ~ .checkmark {
+				background-color: $off-white;
+			}
+
+			input:checked ~ .radio--name {
+				color: $primary_color_4;
+				font-weight: $normal;
+			}
+		}
+	}
+
+	.form--input-date-wrap {
+		@extend .df;
+		@extend .jcsb;
+		@extend .aic;
+		@extend .fww;
+
+		&-title {
+			width: 100%;
+			font-size: $font16;
+			font-weight: $light;
+			color: $text_color_2;
+			line-height: 14px;
+			margin-bottom: 5px;
+		}
+
+		.pure-material-textfield-outlined {
+			width: calc(100% / 3);
+		}
+	}
+
+	.pure-material-textfield-outlined {
+		position: relative;
+		display: inline-block;
+		padding-top: 6px;
+		font-size: $font16;
+		font-weight: $light;
+		line-height: 1.5;
+		width: 100%;
+
+		.sp {
+			position: absolute;
+			top: 55%;
+			transform: translateY(-50%);
+			right: 15px;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 9;
+
+			&.sp_hidden:before {
+				content: "\e911";
+			}
+		}
+	}
+	/* Input, Textarea */
+	.pure-material-textfield-outlined > textarea {
+		resize: none;
+	}
+
+	.pure-material-textfield-outlined > input,
+	.pure-material-textfield-outlined > textarea {
+		box-sizing: border-box;
+		margin: 0;
+		border: solid 1px;
+		/* Safari */
+		border-color: $border-color;
+		border-top-color: transparent;
+		padding: 15px 13px;
+		width: 100%;
+		color: $text_color_1;
+		background-color: transparent;
+		box-shadow: none;
+		/* Firefox */
+		line-height: inherit;
+		caret-color: $text_color_1;
+		transition: border 0.2s, box-shadow 0.2s;
+		border-radius: 0;
+		font-size: $font16;
+		font-weight: $normal;
+	}
+
+	.pure-material-textfield-outlined.errored > input,
+	.pure-material-textfield-outlined.errored > textarea {
+		border-left-color: $error_color;
+		border-right-color: $error_color;
+		border-bottom-color: $error_color;
+	}
+	/* Span */
+	.pure-material-textfield-outlined > input + span,
+	.pure-material-textfield-outlined > textarea + span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		border-color: $border-color;
+		width: 100%;
+		max-height: 100%;
+		color: #707070;
+		font-size: 75%;
+		line-height: 15px;
+		cursor: text;
+		transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+	}
+
+	.pure-material-textfield-outlined.errored > input + span,
+	.pure-material-textfield-outlined.errored > textarea + span {
+		color: $error_color;
+	}
+	/* Corners */
+	.pure-material-textfield-outlined > input + span::after,
+	.pure-material-textfield-outlined > input + span::before,
+	.pure-material-textfield-outlined > textarea + span::after,
+	.pure-material-textfield-outlined > textarea + span::before {
+		content: "";
+		display: block;
+		box-sizing: border-box;
+		margin-top: 6px;
+		border-top: solid 1px;
+		border-top-color: $border-color;
+		min-width: 10px;
+		height: 8px;
+		pointer-events: none;
+		box-shadow: inset 0 1px transparent;
+		transition: border-color 0.2s, box-shadow 0.2s;
+		border-radius: 0;
+	}
+
+	.pure-material-textfield-outlined > input + span::before,
+	.pure-material-textfield-outlined > textarea + span::before {
+		margin-right: 4px;
+		border-left: solid 1px transparent;
+		border-radius: 0;
+	}
+
+	.pure-material-textfield-outlined > input + span::after,
+	.pure-material-textfield-outlined > textarea + span::after {
+		flex-grow: 1;
+		margin-left: 4px;
+		border-right: solid 1px transparent;
+		border-radius: 0;
+	}
+	/* Hover */
+	.pure-material-textfield-outlined:hover > input,
+	.pure-material-textfield-outlined:hover > textarea {
+		border-color: $border-color;
+		border-top-color: transparent;
+	}
+
+	.pure-material-textfield-outlined:hover > input + span,
+	.pure-material-textfield-outlined:hover > textarea + span {
+		color: $text_color_3;
+	}
+
+	.pure-material-textfield-outlined.errored:hover > input + span,
+	.pure-material-textfield-outlined.errored:hover > textarea + span {
+		color: $error_color;
+	}
+
+	.pure-material-textfield-outlined:hover > input + span::after,
+	.pure-material-textfield-outlined:hover > input + span::before,
+	.pure-material-textfield-outlined:hover > textarea + span::after,
+	.pure-material-textfield-outlined:hover > textarea + span::before {
+		border-top-color: $border-color;
+	}
+
+	.pure-material-textfield-outlined:hover > input:not(:focus):placeholder-shown,
+	.pure-material-textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
+		border-color: $text_color_3;
+	}
+
+	.pure-material-textfield-outlined.errored:hover > input:not(:focus):placeholder-shown,
+	.pure-material-textfield-outlined.errored:hover > textarea:not(:focus):placeholder-shown {
+		border-color: $error_color;
+	}
+	/* Placeholder-shown */
+	.pure-material-textfield-outlined > input:not(:focus):placeholder-shown,
+	.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown {
+		border-top-color: $border-color;
+	}
+
+	.pure-material-textfield-outlined.errored > input:not(:focus):placeholder-shown,
+	.pure-material-textfield-outlined.errored > textarea:not(:focus):placeholder-shown {
+		border-top-color: $error_color;
+	}
+
+	.pure-material-textfield-outlined > input:not(:focus):placeholder-shown + span,
+	.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown + span {
+		font-size: inherit;
+		line-height: 68px;
+	}
+
+	.pure-material-textfield-outlined > input:not(:focus):placeholder-shown + span::after,
+	.pure-material-textfield-outlined > input:not(:focus):placeholder-shown + span::before,
+	.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::after,
+	.pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::before {
+		border-top-color: transparent;
+	}
+	/* Focus */
+	.pure-material-textfield-outlined > input:focus,
+	.pure-material-textfield-outlined > textarea:focus {
+		border-color: $text_color_3;
+		border-top-color: transparent;
+		outline: none;
+	}
+
+	.pure-material-textfield-outlined.errored > input:focus,
+	.pure-material-textfield-outlined.errored > textarea:focus {
+		border-left-color: $error_color;
+		border-right-color: $error_color;
+		border-bottom-color: $error_color;
+	}
+
+	.pure-material-textfield-outlined > input:focus + span,
+	.pure-material-textfield-outlined > textarea:focus + span {
+		color: $text_color_3;
+	}
+
+	.pure-material-textfield-outlined.errored > input:focus + span,
+	.pure-material-textfield-outlined.errored > textarea:focus + span {
+		color: $error_color;
+	}
+
+	.pure-material-textfield-outlined > input:focus + span::after,
+	.pure-material-textfield-outlined > input:focus + span::before,
+	.pure-material-textfield-outlined > textarea:focus + span::after,
+	.pure-material-textfield-outlined > textarea:focus + span::before {
+		border-top-color: $text_color_3 !important;
+		// box-shadow: inset 0 1px $text_color_3;
+	}
+
+	.pure-material-textfield-outlined.errored > input:focus + span::after,
+	.pure-material-textfield-outlined.errored > input:focus + span::before,
+	.pure-material-textfield-outlined.errored > textarea:focus + span::after,
+	.pure-material-textfield-outlined.errored > textarea:focus + span::before {
+		border-top-color: red !important;
+		// box-shadow: inset 0 1px $text_color_3;
+	}
+	/* Disabled */
+	.pure-material-textfield-outlined > input:disabled,
+	.pure-material-textfield-outlined > input:disabled + span,
+	.pure-material-textfield-outlined > textarea:disabled,
+	.pure-material-textfield-outlined > textarea:disabled + span {
+		border-color: rgba(0, 0, 0, 0.38) !important;
+		border-top-color: transparent !important;
+		color: rgba(0, 0, 0, 0.38);
+		pointer-events: none;
+	}
+
+	.pure-material-textfield-outlined > input:disabled + span::after,
+	.pure-material-textfield-outlined > input:disabled + span::before,
+	.pure-material-textfield-outlined > textarea:disabled + span::after,
+	.pure-material-textfield-outlined > textarea:disabled + span::before {
+		border-top-color: rgba(0, 0, 0, 0.38) !important;
+	}
+
+	.pure-material-textfield-outlined > input:disabled:placeholder-shown,
+	.pure-material-textfield-outlined > input:disabled:placeholder-shown + span,
+	.pure-material-textfield-outlined > textarea:disabled:placeholder-shown,
+	.pure-material-textfield-outlined > textarea:disabled:placeholder-shown + span {
+		border-top-color: rgba(0, 0, 0, 0.38) !important;
+	}
+
+	.pure-material-textfield-outlined > input:disabled:placeholder-shown + span::after,
+	.pure-material-textfield-outlined > input:disabled:placeholder-shown + span::before,
+	.pure-material-textfield-outlined > textarea:disabled:placeholder-shown + span::after,
+	.pure-material-textfield-outlined > textarea:disabled:placeholder-shown + span::before {
+		border-top-color: transparent !important;
+	}
+	/* Faster transition in Safari for less noticable fractional font-size issue */
+	@media not all and (min-resolution:.001dpcm) {
+		@supports (-webkit-appearance:none) {
+			.pure-material-textfield-outlined > input,
+			.pure-material-textfield-outlined > input + span,
+			.pure-material-textfield-outlined > input + span::after,
+			.pure-material-textfield-outlined > input + span::before,
+			.pure-material-textfield-outlined > textarea,
+			.pure-material-textfield-outlined > textarea + span,
+			.pure-material-textfield-outlined > textarea + span::after,
+			.pure-material-textfield-outlined > textarea + span::before {
+				transition-duration: 0.1s;
+			}
+		}
+	}
+}
+
+
+.error {
+    font: 12px 'ZurichBT', sans-serif;
+    color: #f00;
+    margin-bottom: 0;
+    margin-top: 0px;
+    // background: #f00;
+    padding: 0px;
+		bottom:-18px;
+		left:0;
+    display: none;
+    position: absolute;
+    width: 100%;
+}

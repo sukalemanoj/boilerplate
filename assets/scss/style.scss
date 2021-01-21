@@ -1,0 +1,20 @@
+// reset and misc
+@import "./core/misc";
+@import "./core/resetNormalize";
+
+// Variables
+@import "./core/variables";
+
+// fonts
+@import "./core/fonts";
+@import "./core/iconVariables";
+@import "./core/iconStyles";
+
+// Main component
+@import "./core/base";
+@import "./core/modal";
+@import "./core/input";
+@import "./core/form";
+@import "./core/accordian";
+@import "./partials/header";
+@import "./partials/footer";

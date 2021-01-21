@@ -1,0 +1,30 @@
+.column--inputs {
+	width: 100%;
+	&-title {
+		font-weight: 300;
+    font-size: $font16;
+    color: $text_color_2;
+    margin-bottom: 1px;
+    display: block;
+	}
+	&-form-wrap {
+		// @extend .df; @extend  .aic;
+	}
+	.form--input-field-wrap {
+		.pure-material-textfield-outlined {
+			input {
+				// border-right: 1px solid transparent;
+			}
+		}
+		&:last-child {
+			.pure-material-textfield-outlined {
+				input {
+					border-right: 1px solid #cfcfcf;
+					&:focus {
+						border-right: 1px solid #ee1c25;
+					}
+				}
+			}
+		}
+	}
+}

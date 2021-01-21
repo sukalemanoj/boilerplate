@@ -1,0 +1,262 @@
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?lu4kg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?lu4kg#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?lu4kg') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?lu4kg') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?lu4kg##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cl--card-wifi {
+  &:before {
+    content: $cl--card-wifi; 
+  }
+}
+.cl--rupee-phone {
+  &:before {
+    content: $cl--rupee-phone; 
+  }
+}
+.cl--card-hand {
+  &:before {
+    content: $cl--card-hand; 
+  }
+}
+.cl--mini-van {
+  &:before {
+    content: $cl--mini-van; 
+  }
+}
+.cl--qr-code {
+  &:before {
+    content: $cl--qr-code; 
+  }
+}
+.cl--save-piggy {
+  &:before {
+    content: $cl--save-piggy; 
+  }
+}
+.cl--location-pin {
+  &:before {
+    content: $cl--location-pin; 
+  }
+}
+.cl--people-pass-counter-2 {
+  &:before {
+    content: $cl--people-pass-counter-2; 
+  }
+}
+.cl--bus-ticket {
+  &:before {
+    content: $cl--bus-ticket; 
+  }
+}
+.cl--buy-ticket-at-convinenience {
+  &:before {
+    content: $cl--buy-ticket-at-convinenience; 
+  }
+}
+.cl--directions-bus {
+  &:before {
+    content: $cl--directions-bus; 
+  }
+}
+.cl--document {
+  &:before {
+    content: $cl--document; 
+  }
+}
+.cl--pass-counter {
+  &:before {
+    content: $cl--pass-counter; 
+  }
+}
+.cl--people-pass-counter {
+  &:before {
+    content: $cl--people-pass-counter; 
+  }
+}
+.cl--route-arrow {
+  &:before {
+    content: $cl--route-arrow; 
+  }
+}
+.cl--route-track-your-bus {
+  &:before {
+    content: $cl--route-track-your-bus; 
+  }
+}
+.cl--yt {
+  &:before {
+    content: $cl--yt; 
+  }
+}
+.cl--bus {
+  &:before {
+    content: $cl--bus; 
+  }
+}
+.cl--timer {
+  &:before {
+    content: $cl--timer; 
+  }
+}
+.cl--track-bus {
+  &:before {
+    content: $cl--track-bus; 
+  }
+}
+.cl--bus-pin {
+  &:before {
+    content: $cl--bus-pin; 
+  }
+}
+.cl--prepaid {
+  &:before {
+    content: $cl--prepaid; 
+  }
+}
+.cl--scan-qr {
+  &:before {
+    content: $cl--scan-qr; 
+  }
+}
+.cl--buy-app-card .path1 {
+  &:before {
+    content: $cl--buy-app-card-path1;  
+    color: rgb(255, 255, 255);
+  }
+}
+.cl--buy-app-card .path2 {
+  &:before {
+    content: $cl--buy-app-card-path2;  
+    margin-left: -0.8974609375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.cl--buy-app-card .path3 {
+  &:before {
+    content: $cl--buy-app-card-path3;  
+    margin-left: -0.8974609375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.cl--buy-app-card .path4 {
+  &:before {
+    content: $cl--buy-app-card-path4;  
+    margin-left: -0.8974609375em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.cl--buy-app-card .path5 {
+  &:before {
+    content: $cl--buy-app-card-path5;  
+    margin-left: -0.8974609375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.cl--buy-app-card .path6 {
+  &:before {
+    content: $cl--buy-app-card-path6;  
+    margin-left: -0.8974609375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.cl--buy-app-card .path7 {
+  &:before {
+    content: $cl--buy-app-card-path7;  
+    margin-left: -0.8974609375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.cl--phone-card {
+  &:before {
+    content: $cl--phone-card; 
+  }
+}
+.cl--correct-plan {
+  &:before {
+    content: $cl--correct-plan; 
+  }
+}
+.cl--travel {
+  &:before {
+    content: $cl--travel; 
+  }
+}
+.cl--ticket {
+  &:before {
+    content: $cl--ticket;     
+    color: #040505;
+  }
+}
+.cl--phone-pay {
+  &:before {
+    content: $cl--phone-pay; 
+  }
+}
+.cl--coins {
+  &:before {
+    content: $cl--coins; 
+  }
+}
+.cl--doc {
+  &:before {
+    content: $cl--doc; 
+  }
+}
+.cl--wallet {
+  &:before {
+    content: $cl--wallet; 
+  }
+}
+.cl--group {
+  &:before {
+    content: $cl--group; 
+  }
+}
+.cl--hamburger {
+  &:before {
+    content: $cl--hamburger;     
+    color: #fff;
+  }
+}
+.cl--fb {
+  &:before {
+    content: $cl--fb; 
+  }
+}
+.cl--ig {
+  &:before {
+    content: $cl--ig; 
+  }
+}
+.cl--li {
+  &:before {
+    content: $cl--li; 
+  }
+}
+.cl--tw {
+  &:before {
+    content: $cl--tw; 
+  }
+}

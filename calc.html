@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="dist/css/style.min.css">
+  <title>boilerPlate</title>
+</head>
+
+<body>
+  <!-- <div class="loader"></div> -->
+  <!-- <div class="header--placeholder"></div> -->
+  <header>
+    <div class="fluid--container">
+      <img src="images/logo.png" class="logo" alt="logo">
+    </div>
+  </header>
+  <div class="container--responsive">
+    <form class="" action="" method="">
+    <div class="column--inputs">
+      <div class="column--inputs-form-wrap">
+        <div class="form--input-field-wrap">
+          <label class="pure-material-textfield-outlined">
+            <input type="tel" name="loanAmt" id="amount" onchange="mycal();" placeholder=" ">
+            <span>Loan Amount</span>
+            <span class="error date_error"></span>
+          </label>
+        </div>
+        <div class="form--input-field-wrap">
+          <label class="pure-material-textfield-outlined">
+            <input type="text" name="annualInterest" id="apr" onchange="mycal();" placeholder=" ">
+            <span>Annual interest (%)</span>
+            <span class="error month_error"></span>
+          </label>
+        </div>
+        <div class="form--input-field-wrap">
+          <label class="pure-material-textfield-outlined">
+            <input type="tel" name="loanYears" id="years" onchange="mycal();" placeholder=" ">
+            <span>Repayment period (years)</span>
+            <span class="error year_error"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button type="button" onclick="mycal();" name="button">Result</button>
+    </form>
+  </div>
+  <div class="results container--responsive">
+    <div class="df aic">
+      <p class="margin--r10">Your New Monthly payment:	</p>
+      <h3 id="payment"></h3>
+    </div>
+    <div class="df aic">
+      <p class="margin--r10">Your Total payment:	</p>
+      <h3 id="total"></h3>
+    </div>
+    <div class="df aic">
+      <p class="margin--r10">Your Total interest :	</p>
+      <h3 id="totalinterest"></h3>
+    </div>
+  </div>
+  <script type="text/javascript" src="dist/js/vendor.min.js"></script>
+  <script type="text/javascript" src="dist/js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="dist/css/style.min.css">
+  <title>boilerPlate</title>
+</head>
+
+<body>
+  <!-- <div class="loader"></div> -->
+  <!-- <div class="header--placeholder"></div> -->
+  <header>
+    <div class="fluid--container">
+      <img src="images/logo.png" class="logo" alt="logo">
+    </div>
+  </header>
+  <div class="container--responsive">
+    <form class="">
+      <div class="column--inputs" id="contactForm">
+        <div class="column--inputs-form-wrap">
+          <div class="form--input-field-wrap">
+            <label class="pure-material-textfield-outlined">
+              <input type="text" id="name" name="name" placeholder=" ">
+              <span>Name</span>
+              <p class="error date_error" id="name_error"></p>
+            </label>
+          </div>
+          <div class="form--input-field-wrap">
+            <label class="pure-material-textfield-outlined">
+              <input type="tel" name="mobile" id="mobile" minlength="10" maxlength="10" placeholder=" ">
+              <span>Mobile</span>
+              <p class="error date_error" id="mobile_error"></p>
+            </label>
+          </div>
+          <div class="form--input-field-wrap">
+            <label class="pure-material-textfield-outlined">
+              <input type="email" name="email" id="email" placeholder=" ">
+              <span>Email</span>
+              <p class="error date_error" id="email_error"></p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" id="form-submit" name="button">submit</button>
+      <button type="button" id="reset" name="button">Reset</button>
+    </form>
+  </div>
+  <script type="text/javascript" src="dist/js/vendor.min.js"></script>
+  <script type="text/javascript" src="dist/js/main.min.js"></script>
+</body>
+
+</html>

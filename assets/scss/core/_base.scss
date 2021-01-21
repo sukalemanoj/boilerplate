@@ -1,0 +1,400 @@
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+    transform: scaleX(1.45);
+}
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+    opacity: 1;
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+  .has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $fontFamily;
+  font-size: 16px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 15px;
+  }
+  @media only screen and (max-width: 1366px) {
+    font-size: 14px;
+  }
+  @media only screen and (max-width: 1280px) {
+    font-size: 13px;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+.link {
+  color:$primary_color_1;
+  text-decoration: none;
+}
+p {
+  line-height: 1.8;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+ul {
+  &.disc {
+    list-style-type: disc;
+    padding-left:20px;
+  }
+  &.order {
+    list-style-type:decimal;
+    padding-left:20px;
+  }
+  li {
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+}
+
+.container {
+  &--responsive {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    @media only screen and (max-width: 1024px) {
+      padding: 0 5%;
+    }
+  }
+}
+.base-container {
+	width: 100%;
+}
+.fluid--container {
+	@extend .base-container;
+	padding: 0 2%;
+}
+.btn {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  @extend %aic; @extend %jcc;
+  padding: 14px 30px!important;
+  background-color: $themecolor;
+  border-radius: 100px;
+  color: $white;
+  outline: 0;
+  border: 0;
+  text-transform: capitalize;
+  &.outline {
+    border: 1px solid $themecolor;
+    background-color: transparent;
+    color: $themecolor;
+    transition: all 0.2s ease-in-out;
+    &:hover, &:focus {
+      background-color: $themecolor;
+      color: $white;
+    }
+  }
+  &.hamburger {
+    width: 60px;
+    height: 60px;
+    @media only screen and (max-width: 768px) {
+      height: 36px;
+      width: 36px;
+    }
+  }
+}
+.font {
+  &--orange {
+    color: $themecolor;
+  }
+  &--grey {
+    color: $grey;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+  &-size {
+    &--18 {
+      font-size: $font18;
+    }
+    &--22 {
+      font-size: $font22;
+    }
+  }
+}
+.text {
+  &--center {
+    text-align: center;
+    &.mobile-left {
+      @media only screen and (max-width: 768px) {
+        text-align: left;
+      }
+    }
+  }
+  &--justify {
+    text-align: justify;
+  }
+}
+.section {
+  &--title {
+    font-size: $font54;
+    font-weight: bold;
+    line-height: normal;
+    text-transform: capitalize;
+    @media only screen and (max-width: 500px) {
+      font-size: 1.663em;
+      width: 100%;
+      text-align: center;
+      &.margin--b50 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &--subtitle {
+    font-size: $font30;
+    text-transform:capitalize;
+    @media only screen and (max-width: 500px) {
+      font-size: $font18;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.margin {
+  //top
+  &--t10 {
+    margin-top: 10px;
+  }
+  &--t20 {
+    margin-top: 20px;
+  }
+  &--t30 {
+    margin-top: 30px;
+  }
+  &--t40 {
+    margin-top: 40px;
+  }
+  &--t50 {
+    margin-top: 50px;
+  }
+  &--t60 {
+    margin-top: 60px;
+  }
+  &--t70 {
+    margin-top: 70px;
+  }
+  &--t80 {
+    margin-top: 80px;
+  }
+  &--t90 {
+    margin-top: 90px;
+  }
+  &--t100 {
+    margin-top: 100px;
+  }
+//bottom
+  &--b10 {
+    margin-bottom: 10px;
+  }
+  &--b20 {
+    margin-bottom: 20px;
+  }
+  &--b30 {
+    margin-bottom: 30px;
+  }
+  &--b40 {
+    margin-bottom: 40px;
+  }
+  &--b50 {
+    margin-bottom: 50px;
+  }
+  &--b60 {
+    margin-bottom: 60px;
+  }
+  &--b70 {
+    margin-bottom: 70px;
+  }
+  &--b80 {
+    margin-bottom: 80px;
+  }
+  &--b90 {
+    margin-bottom: 90px;
+  }
+  &--b100 {
+    margin-bottom: 100px;
+  }
+//right
+  &--r10 {
+    margin-right: 10px;
+  }
+  &--r20 {
+    margin-right: 20px;
+  }
+  &--r30 {
+    margin-right: 30px;
+  }
+  &--r40 {
+    margin-right: 40px;
+  }
+  &--r50 {
+    margin-right: 50px;
+  }
+//left
+  &--l10 {
+    margin-right: 10px;
+  }
+  &--l20 {
+    margin-right: 20px;
+  }
+  &--l30 {
+    margin-right: 30px;
+  }
+  &--l40 {
+    margin-right: 40px;
+  }
+  &--l50 {
+    margin-right: 50px;
+  }
+}
+
+
+.padding {
+  &--t50 {
+    padding-top: 50px;
+  }
+}
+
+.df {
+	display: flex;
+}
+
+.aic {
+	align-items: center;
+}
+.aib{
+	align-items:baseline;
+}
+.jcc {
+	justify-content: center;
+}
+.jcsa {
+	justify-content: space-around;
+}
+.jcsb {
+	justify-content: space-between;
+}
+.jcse {
+	justify-content: space-evenly;
+}
+
+.jcfs {
+	justify-content:flex-start;
+}
+.jcfe{
+	justify-content:flex-end;
+}
+.fdc {
+	flex-direction: column;
+}
+.fdc {
+	flex-direction: column;
+}
+.fdcr {
+	flex-direction:column-reverse;
+}
+.fdr {
+	flex-direction:row;
+}
+.fdrr {
+	flex-direction: row-reverse;
+}
+.aifs {
+	align-items: flex-start;
+}
+.aife{
+	align-items: flex-end;
+}
+
+.fww {
+	flex-wrap: wrap;
+}
+
+.fwnw {
+	flex-wrap: nowrap;
+}
+
+
+.width {
+  &--100 {
+    width: 100%;
+  }
+}
+.aife {
+  align-items: flex-end;
+}
+
+.mobile-center-flex {
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
+  @media only screen and (max-width: 320px) {
+    .margin--r20 {
+      margin-right: 0;
+    }
+  }
+}
+.seo-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transition-delay: 1s;
+  @media only screen and (max-width: 768px) {
+    opacity: 1;
+  }
+  &.show {
+    opacity: 1;
+  }
+}

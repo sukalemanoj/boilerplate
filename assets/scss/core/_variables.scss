@@ -1,0 +1,75 @@
+
+// Color Theme
+$themecolor: #EE7C22;
+$themecolor2: #FFD581;
+$themecolor3: #FFC042;
+$grey: #707070;
+$lightGrey: #F5F5F5;
+$black: #000000;
+$white: #ffffff;
+$off-white: #f7f7f7;
+// Typography
+$fontFamily: "Noto Sans", sans-serif !default;
+$font8:8px;
+$font10:10px;
+$font12:12px;
+$font14:14px;
+$font16: 1.000em; // 16px
+$font18: 1.125em; // 18px
+$font22: 1.250em; // 20px
+$font30: 1.563em; // 25px
+$font54: 2.500em; // 40px
+
+// Shadows
+$boxShadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+//border-color
+$border-color:#CFCFCF;
+
+//font-weight
+$light:light;
+$normal:normal;
+
+//primary colors
+$primary_color_1: #740001;
+$primary_color_2: #EC5993;
+$primary_color_3: #BD4824;
+$primary_color_4: #E76C23;
+$primary_color_5: #C39464;
+$primary_color_6: #F8F8F8;
+
+
+//base colors
+$white: #FFFFFF;
+$black: #000000;
+
+//text colors
+$text_color_1: #111111;
+$text_color_2: #616161;
+$text_color_3: #EE1C25;
+$text_color_4: #a41b2b;
+$text_color_5:#757575;
+
+//border colors
+$border_color_1:#707070;
+
+
+//background colors
+$bg_color_1: #F7F7F7;
+$green:#09BE3F;
+$yellow:#EFBC13;
+$red:#FF1B43;
+$grey:#AAAAAA;
+
+//event colors
+$link_color: #E76C23;
+$error_color: #EE1C25;
+$success_color: #26A052;
+
+//opacity colours
+$grey_light:rgba(91,91,91,0.3);
+
+//box shadow
+$boxShadow: 0 9px 13px rgba(0, 0, 0, 0.26);
+$boxShadowMed: 0 3px 6px rgba(0, 0, 0, 0.26);
+$boxShadowSmall: 0 0px 6px rgba(0, 0, 0, 0.26);
